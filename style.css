@@ -185,7 +185,7 @@ nav {
 .circle canvas {
   vertical-align: top;
   width: 200px !important;
-  height: auto;
+  height: auto !important;
 }
 
 .circle strong {
