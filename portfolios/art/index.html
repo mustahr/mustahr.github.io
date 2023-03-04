@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./image/logo.png" />
+    <title>My Bootstrap Website</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="loading-animation"></div>
+
+    <!-- Nav Bar -->
+    <header>
+      <nav
+        class="navbar navbar-light fixed-top w-100 d-flex justify-content-center"
+      >
+        <div class="row w-100 d-flex justify-content-center">
+          <div class="arrow col-12 d-flex justify-content-center mt-2">
+              <img src="image/menu-btn.png" width="50px" height="auto" alt="menu-btn" title="Menu">
+          </div>
+          <div
+            class="navbar mt-3 w-100 justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav ml-auto w-100 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="inspirations.html">Inspirations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#quote">Quote of the day</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- section 1 -->
+    <section id="index">
+      <div class="small-sec-1">
+        <div class="content-1">
+          <div class="content-11">
+            <div class="text-desc">
+              <p>Work with me to bring your dream spaces to life.</p>
+            </div>
+            <a class="next_link" href="about.html" title="About me">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="content-12">
+            <h1>Harper Russo</h1>
+            <p>Interior Design · online portfolio</p>
+          </div>
+        </div>
+        <div class="content-2">
+          <img src="/image/img_1.png" alt="Logo" class="image" />
+        </div>
+      </div>
+      <div class="small-sec-2">
+        <h1>01</h1>
+      </div>
+      <div class="content-3"></div>
+    </section>
+
+    <!-- bootstrap -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- main js -->
+    <script src="main.js"></script>
+  </body>
+</html>

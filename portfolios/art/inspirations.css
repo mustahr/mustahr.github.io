@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #cdc1ba;
+  --black-color: #171a1d;
+  --gray-color: #aaaaaa;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+/* Set a background color and add some padding to the navbar */
+.navbar {
+  padding: 20px;
+  width: 100%;
+  z-index: 20;
+  background-color: var(--bg-color);
+}
+.hide-nav {
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+}
+
+/* Style the navigation links */
+
+.navbar-nav .nav-link {
+  color: var(--black-color);
+  font-weight: bold;
+  margin-left: 20px;
+}
+/* Add some margin to the right of the last navigation link */
+.navbar-nav .nav-link:last-child {
+  margin-right: 0;
+}
+
+/* Change the color of the active navigation link */
+.navbar-nav .nav-link.active {
+  color: #007bff;
+}
+
+nav {
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+  transition: all 0.5s ease;
+}
+.arrow {
+  cursor: pointer;
+}
+.arrow-rot {
+  transform: scaleY(-1);
+}
+.showNavBar {
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 0 100%) !important;
+}
+
+/* end of tha nav bar */
+/* style of button */
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* page 1 */
+/* style of section*/
+
+section {
+  background-color: var(--bg-color);
+  display: flex !important;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 9vh;
+  flex-direction: column;
+}
+
+.small-sec-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.small-sec-1 .content-1 {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.small-sec-1 .content-1 .content-11 {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  padding-inline: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid var(--black-color);
+  border-top: unset;
+}
+.small-sec-1 .content-1 .content-11 .text-desc {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  font-size: 20px;
+  animation: showLeft 1s ease-in;
+}
+
+#index .next_link {
+  text-decoration: none;
+  color: var(--black-color);
+  border-left: 2px solid var(--black-color);
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+  overflow: hidden;
+}
+
+#index .next_link svg {
+  transform: rotate(90deg);
+  height: 50%;
+  width: fit-content;
+  animation: showTop 1s ease-in;
+}
+
+.small-sec-1 .content-1 .content-12 {
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 2px solid var(--black-color);
+  overflow: hidden;
+}
+.small-sec-1 .content-1 .content-12 h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  animation: showBottom 1s ease-in;
+}
+.small-sec-1 .content-1 .content-12 p {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  animation: showBottom 1s ease-in;
+}
+
+.small-sec-1 .content-2 {
+  padding: 20px;
+  padding-right: 0;
+  border: 2px solid var(--black-color);
+  border-left: unset;
+  overflow: hidden;
+}
+.small-sec-1 .content-2 img {
+  width: 100%;
+  animation: showRight 1s ease-in;
+}
+
+.small-sec-2 {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-bottom: 0 !important;
+  border: 2px solid var(--black-color);
+  border-top: unset;
+}
+.small-sec-2 h1 {
+  border-left: 2px solid var(--black-color);
+  padding: 20px 40px;
+  margin-bottom: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+.content-3 {
+  background-image: url("./image/insperations.png");
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid var(--black-color);
+  border-top: unset;
+  min-width: 100%;
+  min-height: 50%;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .small-sec-1 .content-1 .content-11 .text-desc {
+    font-size: 20px;
+  }
+  .small-sec-1 .content-1 .content-12 h2 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 700px) {
+  .small-sec-1 {
+    grid-template-columns: 1fr;
+  }
+  .small-sec-1 .content-2 {
+    display: none;
+  }
+  .content-3 {
+    display: block;
+  }
+  .small-sec-1 .content-1 .content-11 .text-desc {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .small-sec-1 .content-1 .content-12 h2 {
+    font-size: 40px;
+  }
+  .small-sec-1 .content-1 .content-11 .text-desc {
+    font-size: 14px;
+  }
+  .small-sec-1 .content-1 .content-12 {
+    padding: 0;
+    padding-left: 10px;
+  }
+}
+/* animtion */
+@keyframes showLeft {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+@keyframes showRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
+@keyframes showTop {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+@keyframes showBottom {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+/* Define the animation */
+@keyframes loading-animation {
+  from {
+    opacity: 1;
+    z-index: 999;
+  }
+}
+
+/* Apply the animation to an element */
+.loading-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  animation: loading-animation 1s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.7;
+}
