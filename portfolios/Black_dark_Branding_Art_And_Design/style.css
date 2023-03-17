@@ -1,0 +1,753 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lobster&display=swap");
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --font-inter: "Inter", sans-serif;
+  --font-Lobster: "Lobster", cursive;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--black);
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--black);
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--black) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  flex-direction: column;
+  padding: 40px 15px;
+  height: 100vh;
+  z-index: 2;
+  transition: all 0.2s ease-in;
+}
+
+header .logo img {
+  filter: invert(1);
+  transition: all 0.2s ease-in;
+}
+
+header p {
+  font-family: var(--font-inter);
+  font-size: 15px;
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  color: var(--white);
+  border-left: 1px solid var(--white);
+  transition: all 0.2s ease-in;
+}
+
+/* The CSS for the first section of the page. */
+.section_1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./image/page_1_image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  color: var(--white);
+  justify-content: flex-start;
+  gap: 8%;
+  padding-left: 130px;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.section_1 .text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 60px;
+}
+.section_1 .text h1:nth-child(1) {
+  font-family: var(--font-Lobster);
+  margin-bottom: 0 !important;
+}
+.section_1 .text h1:nth-child(2) {
+  padding-left: 40px;
+  font-family: var(--font-inter);
+  margin-bottom: 0 !important;
+}
+.section_1 hr {
+  width: 3px;
+  height: 80px;
+  background-color: var(--white);
+  transform: skew(-25deg);
+  margin-bottom: 0 !important;
+}
+.section_1 h5 {
+  margin-bottom: 0 !important;
+}
+
+/* The CSS for the seconde section of the page. */
+
+.section_2 {
+  padding: 80px 15%;
+  background-color: var(--black) !important;
+  margin: 0 !important;
+}
+
+.section_2 .content-1 img {
+  width: 90%;
+}
+.section_2 .content-1 h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: -40px;
+  font-family: var(--font-Lobster);
+  color: var(--white);
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+.section_2 .content-2 .image {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 40px;
+}
+.section_2 .content-2 .image img {
+  width: 60%;
+  float: right;
+}
+.section_2 .content-2 h6 {
+  font-family: var(--font-inter);
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 60px;
+  width: fit-content;
+  padding: 10px 40px;
+}
+.section_2 .content-2 p {
+  font-family: var(--font-inter);
+  color: var(--white);
+  max-width: 80%;
+}
+
+/* The CSS for the 3thd section of the page. */
+
+.section_3 {
+  width: 100%;
+  background-color: var(--black);
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 100px;
+  color: var(--white);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.section_3 .content-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 8%;
+}
+
+.section_3 .text {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.section_3 .text h1 {
+  font-size: 60px;
+  font-family: var(--font-Lobster);
+  margin-top: 0 !important;
+}
+.section_3 hr {
+  width: 3px;
+  height: 80px;
+  background-color: var(--white);
+  transform: skew(-25deg);
+  margin-top: 0 !important;
+}
+.section_3 h6 {
+  font-size: 16px;
+  margin-top: 0 !important;
+}
+
+.section_3 .logos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section_3 .logos .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3);
+}
+.section_3 .logos .img img {
+  width: 200px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.active {
+  background-color: var(--white) !important;
+}
+.active .logo img {
+  filter: invert(0);
+}
+
+.active .title p {
+  color: var(--black);
+  border-left: 1px solid var(--black);
+}
+
+/* The CSS for the 4rd section of the page. */
+
+.section_4 {
+  width: 100%;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-inline: 10%;
+}
+
+.section_4 h1 {
+  font-family: var(--font-Lobster);
+  font-size: 60px;
+}
+.section_4 p {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  opacity: 0.8;
+  max-width: 70%;
+}
+
+.section_4 img {
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.section_4 .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.section_4 .content .first {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.section_4 .content .first img {
+  max-width: 300px;
+  object-fit: fill;
+}
+
+.section_4 .content .first .text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section_4 .content .second {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.section_4 .content .second img {
+  max-width: 250px;
+  object-fit: fill;
+}
+
+.section_4 .content .second .text {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.section_4 .page_4_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section_4 .page_4_logo .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* The CSS for the 5th section of the page. */
+
+.section_5 {
+  position: relative;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url("image/page_5_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+  padding-left: 50px;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.section_5 .de-gradient-edge-top {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 0) 0%,
+    rgba(23, 26, 29, 0) 100%
+  );
+}
+.section_5 .de-gradient-edge-bottom {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(23, 26, 29, 0) 100%);
+}
+
+.section_5 img {
+  max-width: 400px;
+}
+.section_5 div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+}
+.section_5 div:nth-child(2) {
+  font-family: var(--font-Lobster);
+}
+.section_5 h1 {
+  font-size: 80px;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+.section_5 p {
+  max-width: 40%;
+  padding-right: 50px;
+}
+
+/* The CSS for the 6th section of the page. */
+
+.section_6 {
+  position: relative;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.section_6 img {
+  max-width: 200px;
+}
+.images img {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.images img:hover {
+  opacity: 1;
+}
+
+.images:hover img:not(:hover) {
+  opacity: 0.5;
+}
+
+.section_6 div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  z-index: 3;
+
+}
+.section_6 .contact {
+  gap: 30px;
+}
+.section_6 .contact div {
+  transition: all 0.1s ease-in-out;
+}
+.section_6 h1 {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: var(--font-Lobster);
+}
+.section_6 p {
+  margin-bottom: 0 !important;
+}
+.section_6 p a {
+  text-decoration: none;
+  color: var(--white);
+}
+.section_6 .contact div:hover {
+  transform: translateX(10px);
+}
+
+.section_6 .images img:nth-child(1) {
+  transform: translateX(-50px);
+}
+.section_6 .images img:nth-child(2) {
+  transform: translateX(250px);
+}
+
+.section_6 .line {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  min-width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+/* A media query. It is used to apply styles to the page when the screen is 1200px or less. */
+@media (max-width: 1200px) {
+  .section_3 .content-1 {
+    gap: 20px;
+  }
+  .section_3 .text h1 {
+    font-size: 51px;
+  }
+  .section_3 h6 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .section_4 {
+    padding-inline: 5%;
+  }
+  .section_4 .content .first img {
+    max-width: 250px;
+  }
+  .section_4 .content .second img {
+    max-width: 200px;
+  }
+  .section_6 img {
+    max-width: 162px;
+  }
+}
+@media (max-width: 992px) {
+  .section_2 .content-2 p {
+    max-width: 100%;
+  }
+  .section_2 .content-2 .image {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 40px 0;
+  }
+  .section_3 .text h1 {
+    font-size: 41px;
+  }
+  .section_3 h6 {
+    font-size: 11px;
+  }
+  .section_3 .logos .img img {
+    width: 139px;
+  }
+  .section_3 .logos {
+    padding-left: 40px;
+  }
+  .section_4 {
+    height: fit-content;
+    padding-inline: 0%;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+  .section_4 p {
+    max-width: 80%;
+  }
+  .section_4 .page_4_logo {
+    align-items: flex-start;
+  }
+
+  .section_5 p {
+    max-width: 51%;
+    padding-right: 50px;
+  }
+  .section_5 h1 {
+    font-size: 50px;
+  }
+
+  .section_6 .images img:nth-child(2) {
+    transform: translateX(173px);
+  }
+}
+@media (max-width: 768px) {
+  .section_3 .content-1 {
+    gap: 0px;
+    flex-direction: column;
+  }
+  .section_3 hr {
+    transform: skew(0deg) rotate(80deg);
+  }
+
+  .section_4 {
+    padding-left: 73px;
+  }
+  .section_4 p {
+    max-width: 100%;
+  }
+  .section_4 .second p {
+    text-align: right;
+  }
+  .section_5 h1 {
+    font-size: 35px;
+  }
+  .section_5 p {
+    max-width: 56%;
+    padding-right: 30px;
+  }
+
+  .section_6 .images {
+    display: none;
+  }
+
+  .section_6 .contact div {
+    display: flex;
+  }
+}
+@media (max-width: 576px) {
+  header {
+    width: 100vw;
+    height: 10vh;
+    flex-direction: row;
+  }
+  header .date {
+    display: none;
+  }
+  header p {
+    writing-mode: unset;
+    transform: unset;
+    border: unset;
+    margin: unset;
+  }
+  .section_1,
+  .section_2,
+  .section_3,
+  .section_4,
+  .section_5,
+  .section_6 {
+    padding-inline: 20px;
+  }
+
+  .section_1 {
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: unset;
+    flex-direction: column;
+  }
+  .section_1 hr {
+    transform: skew(0deg) rotate(90deg);
+    margin: unset;
+    border: unset;
+    margin-left: 50px;
+  }
+
+  .section_3 .logos {
+    padding-left: 0px;
+  }
+  .section_5 {
+    padding-left: 0;
+  }
+
+  .section_3 {
+    height: unset;
+  }
+
+  .section_3 .logos .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 2);
+  }
+
+  .section_4 .content {
+    margin-bottom: 20px;
+  }
+
+  .section_4 .content .first {
+    flex-direction: column;
+  }
+  .section_4 .content .second {
+    flex-direction: column-reverse;
+  }
+  .section_4 .content .second .text {
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .section_4 .content .second .text p {
+    text-align: left;
+  }
+  .section_5 {
+    height: unset;
+    padding-right: unset;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .section_5 div {
+    justify-content: start;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .section_5 p {
+    max-width: 100%;
+    padding-inline: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+}
+
+/* Define the animation */
+@keyframes loading-animation {
+  from {
+    opacity: 1;
+    z-index: 999;
+  }
+}
+
+/* Apply the animation to an element */
+.loading-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+  animation: loading-animation 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  border: 4px solid var(--white);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+
+/*  animation on scroll  */
+
+.fade-up {
+  animation: scroll 1s;
+}
+
+@keyframes scroll {
+  from {
+      transform: translateY(200px);
+      opacity: 0;
+  }
+}

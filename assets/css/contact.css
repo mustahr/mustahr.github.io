@@ -1,0 +1,123 @@
+.contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 150px 50px;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.contact .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .info h1 {
+    font-size: 80px;
+    font-family: var(--font-Righteous);
+    color: var(--black);
+}
+
+.contact .desc p {
+    font-size: 20px;
+    font-family: var(--font-inter);
+    color: var(--black-14);
+}
+.contact .say_hi {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+}
+.contact a, .contact p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--black-2);
+    display: block;
+    margin-top: 20px;
+}
+.contact a {
+    width: fit-content;
+    border-bottom: 1px solid var(--black-14);
+}
+.contact a:hover {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.contact .adress,
+.contact .info {
+    min-width: 50% !important;
+}
+
+.contact .adress h3 {
+    font-size: 40px;
+    font-family: var(--font-Righteous);
+    color: var(--black);
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--black-14);
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    padding: 15px 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    outline: 0;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    margin-bottom: 35px;
+}
+
+.contact textarea {
+    padding-bottom: 0;
+}
+
+.contact .wc-btn-primary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    text-transform: capitalize;
+    color: var(--black-3);
+    border: 1px solid var(--gray);
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.contact button {
+    background: transparent;
+}
+
+.contact .wc-btn-primary:hover {
+    color: var(--black-2);
+    border: 1px solid #c9f31d;
+    text-decoration: unset;
+}
+
+.contact .wc-btn-primary:hover span {
+    width: 300px;
+    height: 300px;
+}
