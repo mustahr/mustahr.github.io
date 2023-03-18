@@ -1,6 +1,7 @@
 
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
+let ScreenWidth = $(window).width();
 //  check if class exist
 let ImgClass = $('.img')[0];
 let ContentId = $('#content')[0];
@@ -38,14 +39,16 @@ const smoother = ScrollSmoother.create({
 smoother.effects('.image', { speed: 0.4 });
 
 // To make the first title stiky while scrolling
-ScrollTrigger.create({
-  trigger: ".content", // What element triggers the scroll
-  scrub: 0.5, // Add a small delay of scrolling and animation. `true` is direct
-  start: "top top", // Can be top, center, bottom
-  end: "bottom bottom", // Can be top, center, bottom
-  pin: ".text",
-  pinSpacing: true,
-});
+if (ScreenWidth > 700) {
+  ScrollTrigger.create({
+    trigger: ".content", // What element triggers the scroll
+    scrub: 0.5, // Add a small delay of scrolling and animation. `true` is direct
+    start: "top top", // Can be top, center, bottom
+    end: "bottom bottom", // Can be top, center, bottom
+    pin: ".text",
+    pinSpacing: true,
+  });
+}
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 

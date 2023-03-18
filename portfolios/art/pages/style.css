@@ -120,9 +120,6 @@ section {
   border-top: unset;
   overflow: hidden;
 }
-.small-sec-1 .content-1 .house-content {
-  max-height: 500px;
-}
 .small-sec-1 .content-1 .content-12 img {
   border-left: 2px solid var(--black-color);
   border-right: 2px solid var(--black-color);

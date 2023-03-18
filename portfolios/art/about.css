@@ -66,7 +66,7 @@ nav {
   transform: scaleY(-1);
 }
 .showNavBar {
-  clip-path: polygon(0 0, 100% 0, 100% 55%, 0 100%) !important;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%) !important;
 }
 
 /* end of tha nav bar */

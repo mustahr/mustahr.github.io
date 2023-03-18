@@ -3,14 +3,27 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 :root {
   --bg-colo: #171a1d;
   --red-color: #cf1f1f;
   --gray-color: #aaaaaa;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #000;
+}
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: var(--bg-colo);
   display: flex;
@@ -18,6 +31,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
 /* Set a background color and add some padding to the navbar */
 .navbar {
   background-color: #f8f9fa;
@@ -25,10 +39,12 @@ body {
   width: 100%;
   z-index: 20;
 }
+
 .hide-nav {
   transform: translateY(-100%);
   transition: all 0.5s ease;
 }
+
 .scrolled a {
   max-width: 50%;
   justify-content: start !important;
@@ -49,6 +65,7 @@ body {
 .navbar-brand {
   margin-right: 0 !important;
 }
+
 .navbar-brand img {
   width: 70px;
   height: auto !important;
@@ -61,6 +78,7 @@ body {
   font-weight: bold;
   margin-left: 20px;
 }
+
 /* Add some margin to the right of the last navigation link */
 .navbar-nav .nav-link:last-child {
   margin-right: 0;
@@ -75,14 +93,17 @@ nav {
   clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
   transition: all 0.5s ease;
 }
+
 .arrow {
   cursor: pointer;
 }
+
 .arrow-rot {
   transform: rotate(180deg);
 }
+
 .showNavBar {
-  clip-path: polygon(0 0, 100% 0, 100% 55%, 0 100%) !important;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%) !important;
 }
 
 /* end of tha nav bar */
@@ -105,6 +126,7 @@ nav {
   margin-left: 20px;
   margin-bottom: 10px;
 }
+
 .social .social-links p {
   display: block;
   margin-left: 20px;
@@ -135,6 +157,7 @@ nav {
   flex-direction: row;
   align-items: center;
 }
+
 #about .container .row {
   position: relative;
 }
@@ -255,6 +278,7 @@ nav {
 .project:hover img {
   filter: brightness(110%);
 }
+
 .project h3 {
   font-size: 20px;
   font-weight: bold;
@@ -279,30 +303,29 @@ nav {
   background-attachment: fixed;
   position: relative;
 }
+
 .de-gradient-edge-top {
   z-index: 1;
   position: absolute;
   top: 0;
   width: 100%;
   height: 30%;
-  background: linear-gradient(
-    180deg,
-    rgba(23, 26, 29, 1) 0%,
-    rgba(23, 26, 29, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(23, 26, 29, 1) 0%,
+      rgba(23, 26, 29, 0) 100%);
 }
+
 .de-gradient-edge-bottom {
   z-index: 1;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 30%;
-  background: linear-gradient(
-    0deg,
-    rgba(23, 26, 29, 1) 0%,
-    rgba(23, 26, 29, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(23, 26, 29, 1) 0%,
+      rgba(23, 26, 29, 0) 100%);
 }
+
 .stats-box {
   border-radius: 10px;
   padding: 40px 20px;
@@ -374,7 +397,7 @@ nav {
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  padding:100px 50px ;
+  padding: 100px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -405,6 +428,7 @@ nav {
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
 }
+
 .contact input[type="text"]::placeholder,
 .contact input[type="email"]::placeholder,
 .contact textarea::placeholder {
@@ -443,6 +467,7 @@ nav {
 #contact h4 {
   color: #fff;
 }
+
 #contact p {
   color: var(--gray-color);
 }
@@ -458,6 +483,7 @@ footer {
   text-align: center;
   width: 100%;
 }
+
 .footer-container {
   display: flex;
   align-items: center;
@@ -480,8 +506,3 @@ footer .social-links a:hover {
 .footer-container .copyright {
   font-size: 14px;
 }
-
-
-
-
-
