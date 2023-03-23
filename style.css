@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    padding-inline: 150px;
+}
+
+.logo {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+svg {
+    filter: invert(1);
+    width: 100px;
+    margin-top: 57px;
+}
+
+.container {
+    margin-top: 20vh;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.info .member {
+    border-left: 1px solid rgba(255, 255, 255, 0.466);
+    padding-left: 50px;
+}
+
+.info .member .contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.info .member .contact h3 {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info .member .contact a {
+    text-decoration: none;
+    color: white;
+    opacity: .8;
+}
+
+.info .member .contact a:hover {
+    border-bottom: 1px solid white;
+}
+
+.info img {
+    width: 100px;
+    border: white 2px solid;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+/* Project section */
+.project .title {
+    text-align: center;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    border-bottom: 1px solid white;
+}
+
+.project .title h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project .structor .desc {
+    color: white;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+.project img {
+    width: 100px;
+}
+
+.first p {
+    color: white;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.first p span {
+    color: rgb(199, 169, 0);
+    font-size: 15px;
+    float: right;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-inline: 50px;
+    }
+
+    .project .title h1 {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .project img {
+        width: 65px;
+    }
+
+    .first p {
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+    .first p span {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+}
