@@ -24,7 +24,7 @@ body {
     align-content: center;
 }
 
-svg {
+.logo img {
     filter: invert(1);
     width: 100px;
     margin-top: 57px;
