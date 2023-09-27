@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: rgb(6, 10, 24);
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 100px;
+}
+
+.word .letter {
+    display: inline-block;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.word:hover > .letter:nth-child(1) {
+    transform: translate(-80%,20%) rotate(8deg);
+}
+.word:hover > .letter:nth-child(2) {
+    transform: translate(-30%,-6%) rotate(-8deg);
+}
+.word:hover > .letter:nth-child(3) {
+    transform: translate(0%,20%) rotate(30deg);
+}
+.word:hover > .letter:nth-child(4) {
+    transform: translate(20%,-20%) rotate(-20deg);
+}
+.word:hover > .letter:nth-child(5) {
+    transform: translate(20%,-80%) rotate(8deg);
+}
+.word:hover > .letter:nth-child(6) {
+    transform: translate(-80%,20%) rotate(8deg);
+}
+.word:hover > .letter:nth-child(7) {
+    transform: translate(-50%,20%) rotate(-50deg);
+}
+.word:hover > .letter:nth-child(8) {
+    transform: translate(50%,-50%) rotate(8deg);
+}

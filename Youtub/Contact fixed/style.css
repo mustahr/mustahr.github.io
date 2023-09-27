@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.contact-container a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    padding: 20px 15px;
+    height: 100%;
+}
+
+.contact-container .contact-us {
+    position: relative;
+    background-color: #7761DF;
+    transition: all .3 ease;
+    transform: translateX(0%);
+    width: 100%;
+    transition: all .3s ease-out;
+}
+
+.contact-container .contact-us>div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: #7761DF;
+    padding: 20px 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: all .5 ease;
+}
+
+
+.contact-container .contact-us span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.contact-container .contact-us i {
+    writing-mode: vertical-rl;
+    transform: rotate(-90deg);
+}
+
+
+.contact-container form {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    padding: 20px;
+    padding-inline: 0;
+    width: 0px;
+    transform-origin: left;
+    overflow: hidden;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: unset;
+    transition: all .3s ease-out;
+}
+
+
+.contact-container .contact-us:hover form {
+    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.048);
+    padding-inline: 20px;
+    width: 400px;
+}
+
+
+.contact-container form h3 {
+    color: #7761DF;
+    margin-bottom: 20px;
+    min-width: 100px
+}
+
+.contact-container form input,
+.contact-container form textarea {
+    padding: 10px 5px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    resize: none;
+}
+
+.contact-container form input::placeholder,
+.contact-container form textarea::placeholder {
+    font-weight: 900;
+}
+
+.contact-container form input:focus,
+.contact-container form textarea:focus {
+    border: 1px solid #7761DF;
+    outline: 1px solid #7761DF;
+}
+
+.contact-container form input[type=submit] {
+    background-color: #7761DF;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+
+.contact-container .button {
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    border-radius: 0 10px 0px 0;
+    place-items: center;
+}
+
+.contact-container .button button {
+    background-color: unset;
+    color: white;
+    outline: unset;
+    border: unset;
+    cursor: pointer;
+
+}
+
+.contact-container .wtp,
+.contact-container .fb {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    width: 100%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.contact-container .wtp {
+    position: relative;
+    font-size: 20px;
+    background: #26D367;
+}
+
+.contact-container .wtp .lable,
+.contact-container .fb .lable {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #26D367;
+    width: 0;
+    padding-inline: 0;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-container .fb {
+    background: rgb(220, 72, 60);
+    border-radius: 0 0 10px 0;
+}
+
+.contact-container .fb .lable {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: rgb(220, 72, 60);
+    /* Facebook background color */
+    width: 0;
+    padding-inline: 0;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-container .wtp:hover .lable,
+.contact-container .fb:hover .lable {
+    width: 150px;
+    padding-inline: 20px;
+}
+
+.contact-container .fb:hover {
+    border-radius: 0;
+}
+
+.hide-contact {
+    transform: translateX(-100%) !important;
+}
+
+.border-button {
+    border-radius: 0 10px 10px 0 !important;
+}
+
+.border-button i {
+    transform: scaleX(-1);
+}

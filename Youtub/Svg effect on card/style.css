@@ -1,0 +1,49 @@
+:root {
+    --blue: #020112;
+    --red: #B31312;
+    --orange: #EA906C;
+    --white: #EEE2DE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#card {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 2 / 3;
+    border : 0.25px solid var(--white);
+    overflow: hidden;
+}
+
+#card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#card:hover img {
+    animation: pulse 800ms ease-in-out;
+    filter: url(#noise);
+}
+
+@keyframes pulse {
+    from , to {
+        scale: 1;
+    }
+    50% {
+        scale: 1.08;
+    }
+}

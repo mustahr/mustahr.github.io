@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svg card</title>
+</head>
+
+<body>
+    <svg style="display: none;">
+        <defs>
+            <filter id="noise">
+                <feTurbulence baseFrequency="0.7,0.8" seed="0" type="fractalNoise" result="static">
+                    <animate attributeName="seed" values="0;100" dur="800ms" repeatCount="1" begin="card.mouseenter" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                    <animate attributeName="scale" values="0;40;0" dur="800ms" repeatCount="1" begin="card.mouseenter" />
+                </feDisplacementMap>
+            </filter>
+        </defs>
+    </svg>
+    <div id="card">
+        <img src="https://images.unsplash.com/photo-1689229415614-f360cc829c48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=700&q=60"
+            alt="coffe shope" draggable="false">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

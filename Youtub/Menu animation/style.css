@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main,
+body {
+    font-family: 'Chela One', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    background-image: url('https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8OHx8bmF0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+}
+
+#nav-toggle {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    z-index: 3;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    background-color: tomato;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#nav-toggle:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+#nav-toggle:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+#nav-toggle i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    color: white;
+    font-size: 1.75rem;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+body:not([data-nav='true'])>#nav-toggle:hover>.open {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+body[data-nav='true']>#nav-toggle>.close {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+body[data-nav='true']>main {
+    transform: translateY(-50%);
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: black;
+    transform: translateY(100%) scale(0.5);
+    overflow-x: scroll;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+nav::-webkit-scrollbar {
+    display: none;
+}
+
+nav #nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+nav #nav-links a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 200 !important;
+}
+
+nav #nav-links a img {
+    width: max(20vw, 400px);
+    aspect-ratio: 1.8/1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-top: 0.75rem;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+body[data-nav='true']>nav {
+    transform: translateY(0%) scale(1);
+}
+
+nav #nav-links a:hover > img {
+    filter: hue-rotate(156deg);
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Rubik:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink : pink;
+    --light-pink : rgb(75, 9, 19);
+}
+
+body {
+    background-color: rgb(1, 1, 19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+nav .link {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 60px;
+    border-bottom: 1px solid gray;
+    padding: 4rem 8rem;
+}
+
+nav .link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-image: linear-gradient(to right,
+            transparent,
+            var(--pink) var(--light-pink-percent),
+            var(--light-pink));
+    transition: all .5s ease;
+}
+
+nav .link:hover::before {
+    width: 100%;
+}
+
+nav .link span {
+    display: inline-block;
+    font-size: 15px;
+    opacity: 0;
+    transform: translateX(100px);
+    margin-left: 3rem;
+    transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+nav .link:hover > span {
+    opacity: 1;
+    transform: translateX(0);
+}

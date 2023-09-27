@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: rgb(6, 10, 24);
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span,
+i {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+a:hover {
+    opacity: .8;
+}
+
+/* nav bar  */
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav>.nav-section {
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-left: 1px solid var(--border-color);
+}
+
+#nav-logo-section {
+    justify-content: flex-start;
+    font-size: 2.5rem;
+}
+
+#nav-logo-section,
+#nav-link-section {
+    flex-basis: calc(100% / 3);
+}
+
+#nav-link-section {
+    gap: 6rem;
+}
+
+#nav-social-section {
+    gap: 3rem
+}
+
+#nav-social-section,
+#nav-contact-section {
+    flex-grow: 1;
+}
+
+/* main content */
+
+main {
+    flex-grow: 1;
+    position: relative;
+    ;
+}
+
+main>article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    height: 100%;
+    transition: all .5s;
+}
+
+main>article>.article-section {
+    height: 100%;
+}
+
+main>article>.article-description-section,
+main>article>.article-nav-section {
+    border-left: 1px solid var(--border-color);
+}
+
+main>article>.article-title-section,
+main>article>.article-nav-section {
+    border-top: 1px solid var(--border-color);
+}
+
+
+main>article>.article-image-section {
+    background-position: center;
+    background-size: cover;
+}
+
+
+main>article:nth-child(1)>.article-image-section {
+    background-image: url('https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2FscGFwZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60');
+}
+
+main>article:nth-child(2)>.article-image-section {
+    background-image: url('https://images.unsplash.com/photo-1494633114655-819eb91fde40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2FscGFwZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60');
+}
+
+main>article:nth-child(3)>.article-image-section {
+    background-image: url('https://images.unsplash.com/photo-1682687221006-b7fd60cf9dd0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60');
+}
+
+main>article:nth-child(4)>.article-image-section {
+    background-image: url('https://images.unsplash.com/photo-1688989680825-0790dc6488fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NjB8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60');
+}
+
+
+main>article>.article-nav-section {
+    width: 100%;
+    height: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main>article>.article-nav-section i {
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+main>article>.article-nav-section i:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--bg-color);
+}
+
+main>article>.article-nav-section i:first-child {
+    border-right: 1px solid var(--border-color);
+}
+
+main>article>.article-description-section {
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    padding: 2rem;
+}
+
+
+main>article>.article-description-section p {
+    color: rgb(136, 136, 136);
+}
+
+
+main>article>.article-title-section {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+main>article>.article-title-section i,
+main>article>.article-title-section h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+
+main>article>.article-title-section i {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+main>article>.article-title-section i:hover {
+    background-color: rgba(58, 58, 58, 0.103);
+}
+
+main>article>.article-title-section h1 {
+    padding: 1rem;
+    padding-right: 20%;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 35px;
+    font-size: 40px;
+}
+
+
+/*  Here where the magic starts */
+main>article[data-status="active"] {
+    opacity: 1;
+    /* transition: all .5s ease; */
+}
+
+main>article[data-status="inactive"] {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: none;
+}
+
+main>article[data-status="becoming-active"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+main>article[data-status="becoming-active-after"] {
+    transform: translateX(100%);
+    transition: none;
+}
+
+main>article[data-status="after"] {
+    transform: translateX(100%);
+}
+
+main>article[data-status="before"] {
+    transform: translateX(-100%);
+}
+
+/* animation */
+.anime {
+    animation: anime 1s;
+}
+
+@keyframes anime {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}

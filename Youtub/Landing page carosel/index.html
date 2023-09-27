@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page carosel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div id="nav-logo-section" class="nav-section">
+            <i class="fa-solid fa-dumpster-fire"></i>
+        </div>
+        <div id="nav-link-section" class="nav-section">
+            <a href="#">ABOUT</a>
+            <a href="#">WORK</a>
+        </div>
+        <div id="nav-social-section" class="nav-section">
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-codepen"></i>
+            </a>
+        </div>
+        <div id="nav-contact-section" class="nav-section">
+            <a href="#">GET IN TOUCH</a>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- article 1 -->
+        <article class="artic" data-index="0" data-status="active">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>This is just a test 😁, so I can told them what I was doing this summer😀</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h1>
+                    1 - DO THE BEST YOU CAN.
+                </h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="article-nav-section article-section">
+                <i class="fa-solid fa-arrow-left" onclick="handleLeftClick()"></i>
+                <i class="fa-solid fa-arrow-right" onclick="handleRightClick()"></i>
+            </div>
+        </article>
+
+        <!-- article 2-->
+        <article class="artic" data-index="1" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>Of course I was gaining some mony so I can be here 😀</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h1 id="text-test">
+                    2 - NAD PROPERTIES YOUR MENTAL HEALTH.
+                </h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="article-nav-section article-section">
+                <i class="fa-solid fa-arrow-left" onclick="handleLeftClick()"></i>
+                <i class="fa-solid fa-arrow-right" onclick="handleRightClick()"></i>
+            </div>
+        </article>
+
+        <!-- article 3-->
+        <article class="artic" data-index="2" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>This is just a test 😁, so I can told them what I was doing this summer😀</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h1>
+                    3 - DO THE BEST YOU CAN.
+                </h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="article-nav-section article-section">
+                <i class="fa-solid fa-arrow-left" onclick="handleLeftClick()"></i>
+                <i class="fa-solid fa-arrow-right" onclick="handleRightClick()"></i>
+            </div>
+        </article>
+
+        <!-- article 4-->
+        <article class="artic" data-index="3" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>This is just a test 😁, so I can told them what I was doing this summer😀</p>
+            </div>
+            <div class="article-title-section article-section">
+                <h1>
+                    4 - DO THE BEST YOU CAN.
+                </h1>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="article-nav-section article-section">
+                <i class="fa-solid fa-arrow-left" onclick="handleLeftClick()"></i>
+                <i class="fa-solid fa-arrow-right" onclick="handleRightClick()"></i>
+            </div>
+        </article>
+    </main>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
